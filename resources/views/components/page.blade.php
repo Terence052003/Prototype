@@ -11,56 +11,63 @@
     <script   script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="drawer">
-        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col">
-          <!-- Navbar -->
-          <div class="navbar bg-base-300 w-full shadow">
-            <div class="flex-none lg:hidden">
-              <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  class="inline-block h-6 w-6 stroke-current">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </label>
-            </div>
-            <div class="mx-2 flex-1 px-2">Department of Education</div>
-            <div class="hidden flex-none lg:block">
-              <ul class="menu menu-horizontal">
-                <!-- Navbar menu content here -->
-                <li><a>Navbar Item 1</a></li>
-                <li><a>Navbar Item 2</a></li>
-              </ul>
-            </div>
-          </div>
+  <div class="flex h-screen">
+    <div class="w-64 h-screen bg-white border-r shadow-md flex flex-col items-center p-4">
+      <!-- Logo -->
+      <div class="mb-4 flex flex-col items-center w-full">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Logo" class="w-20 h-20 object-contain">
+          <span class="text-sm font-semibold">Special Order System</span>
+      </div>
 
-          <div class="flex h-screen">
-            <!-- Sidebar -->
-            <div class="drawer lg:drawer-open w-80 bg-base-300 p-4 min-h-full">
-              <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-              <div class="drawer-side">
-                <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-                <ul class="menu text-base-content">
-                  <li><a>Dashboard</a></li>
-                  <li><a>Transaction</a></li>
-                  <li><a>Announcement</a></li>
-                  <li><a>Resources</a></li>
-                </ul>
-              </div>
-            </div>
+      <hr class="w-full border-gray-300 mb-4">
 
-            <!-- Main Content -->
-            <div class="flex-1 overflow-auto p-6">
-              <p>@yield('page')</p>
-            </div>
-          </div>
+      <!-- Navigation -->
+      <nav class="w-full">
+          <ul class="space-y-2">
+              <li>
+                  <a href="#" class="flex items-center px-4 py-2 text-white bg-red-500 rounded-lg">
+                      Dashboard
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg">
+                      Transaction
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg">
+                      Announcement
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg">
+                      Resources
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  <div class="flex-1 flex flex-col">
+    <!-- Navbar -->
+    <div class="h-36 bg-white text-white flex items-center justify-between px-6">
+        <div class="flex flex-col">
+            <h1 class="text-2xl font-semibold text-black">
+                Welcome Back, <span class="italic">(Name)</span>!
+            </h1>
+            <!-- Line Separator -->
+            <div class="w-48 border-t border-gray-400 my-1"></div>
+            <!-- Special Order System -->
+            <p class="text-gray-500 text-sm">Special Order System</p>
+        </div>
+        <div class="flex space-x-4">
+            <!-- Search Input -->
+            <input type="text" placeholder="Search..." class="px-4 py-2 rounded-lg text-black border-1 border-gray-900">
+            <!-- Notification Button -->
+            <button class="p-2 bg-gray-200 text-blue-500 rounded-lg hover:bg-gray-300">🔔</button>
+            <!-- User Profile Button -->
+            <button class="p-2 bg-gray-200 text-blue-500 rounded-lg hover:bg-gray-300">👤</button>
+        </div>
     </div>
+    @yield('page')
 </body>
 </html>

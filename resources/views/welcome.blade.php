@@ -2,10 +2,15 @@
 @section('main')
 
     <main class="flex items-center justify-center min-h-screen bg-gray-100">
-        <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-center text-gray-700">Deped Calabarzon Region IV-A</h2>
+        <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-">
+            <div class="flex justify-center">
+                <div class="flex w-24">
+                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </div>
+              </div>
+            <h2 class="text-2xl font-bold text-center text-gray-700 mt-6">Please Log In</h2>
 
-            <form action="/dashboard" class="mt-6">
+            <form action="/dashboard" class="mt-2">
                 <div>
                     <label class="input input-bordered flex items-center gap-2">
                         <svg
@@ -35,11 +40,10 @@
                         <input type="password" class="grow" value="password" />
                       </label>
 
-                <button type="submit" class="w-full py-2 mt-6 text-white bg-blue-500 rounded-lg hover:bg-blue-600">Login</button>
-
-                <div class="mt-4 text-sm text-center text-gray-600">
-                    <a href="/password" class="text-blue-500 hover:underline">Forgot Password?</a>
-                </div>
+                <button type="submit" class="w-full py-2 mt-6 text-white bg-red-400 rounded-lg hover:bg-red-300">Login</button>
+                <p>Forgot password?
+                    <a href="/password" class="text-blue-500 hover:underline">Click Here!</a>
+                </p>
             </form>
         </div>
     </main>
